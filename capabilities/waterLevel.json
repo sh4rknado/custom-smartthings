@@ -1,0 +1,34 @@
+{
+    "id": "waterLevel",
+    "version": 1,
+    "status": "live",
+    "name": "water Level",
+    "ephemeral": false,
+    "attributes": {
+        "infraredLevel": {
+            "schema": {
+                "title": "Percent",
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 100
+                    },
+                    "unit": {
+                        "type": "string",
+                        "enum": [
+                            "%"
+                        ],
+                        "default": "%"
+                    }
+                },
+                "additionalProperties": false,
+                "required": [
+                    "value"
+                ]
+            },
+            "enumCommands": []
+        }
+    }
+}
