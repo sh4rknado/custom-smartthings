@@ -2,10 +2,10 @@
     "id": "waterLevel",
     "version": 1,
     "status": "live",
-    "name": "waterLevelCapabilities",
+    "name": "water Level",
     "ephemeral": false,
     "attributes": {
-        "infraredLevel": {
+        "waterLevel": {
             "schema": {
                 "title": "Percent",
                 "type": "object",
@@ -28,7 +28,24 @@
                     "value"
                 ]
             },
+            "setter": "setwaterLevel",
             "enumCommands": []
+        }
+    },
+    "commands": {
+        "setwaterLevel": {
+            "name": "setwaterLevel",
+            "arguments": [
+                {
+                    "name": "level",
+                    "optional": false,
+                    "schema": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 100
+                    }
+                }
+            ]
         }
     }
 }

@@ -1,0 +1,61 @@
+{
+    "dashboard": {
+        "states": [
+            {
+                "label": "{{waterLevel.value}}{{waterLevel.unit}}"
+            }
+        ],
+        "actions": []
+    },
+    "detailView": [
+        {
+            "label": "{{i18n.label}}",
+            "displayType": "slider",
+            "slider": {
+                "range": [
+                    0,
+                    100
+                ],
+                "unit": "waterLevel.unit",
+                "command": "setwaterLevel",
+                "argumentType": "number",
+                "value": "waterLevel.value",
+                "valueType": "number"
+            }
+        }
+    ],
+    "automation": {
+        "conditions": [
+            {
+                "label": "{{i18n.label}}",
+                "displayType": "numberField",
+                "numberField": {
+                    "value": "waterLevel.value",
+                    "valueType": "number",
+                    "unit": "waterLevel.unit",
+                    "range": [
+                        0,
+                        100
+                    ]
+                }
+            }
+        ],
+        "actions": [
+            {
+                "label": "{{i18n.label}}",
+                "displayType": "numberField",
+                "numberField": {
+                    "command": "setwaterLevel",
+                    "argumentType": "number",
+                    "unit": "waterLevel.unit",
+                    "range": [
+                        0,
+                        100
+                    ]
+                }
+            }
+        ]
+    },
+    "id": "waterLevel",
+    "version": 1
+}
