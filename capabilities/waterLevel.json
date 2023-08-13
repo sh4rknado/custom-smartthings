@@ -2,7 +2,7 @@
     "id": "waterLevel",
     "version": 1,
     "status": "live",
-    "name": "water Level",
+    "name": "waterLevelCapabilities",
     "ephemeral": false,
     "attributes": {
         "infraredLevel": {
